@@ -1,16 +1,28 @@
+import services.FileRenamingService
+
 static void main(String[] args) {
-    String workingDirectory = 'C:\\Users\\acmacunlay\\Documents\\Test Data'
-    String backupDirectory = 'C:\\Users\\acmacunlay\\Documents\\Backup'
-    String contains = '0'
-    String replaceWith = '9'
-    String logFilePath = 'event.log'
+    Scanner workingDirectoryScanner = new Scanner(System.in)
+    println("Set Working Directory:")
+    String workingDirectory = workingDirectoryScanner.nextLine()
+
+    Scanner backupDirectoryScanner = new Scanner(System.in)
+    println("Set Backup Directory:")
+    String backupDirectory = backupDirectoryScanner.nextLine()
+
+    Scanner fileNameWithScanner = new Scanner(System.in)
+    println("File Name with Char Sequence:")
+    String fileNameWith = fileNameWithScanner.nextLine()
+
+    Scanner replaceWithScanner = new Scanner(System.in)
+    println("Replace Char Sequence with:")
+    String replaceWith = replaceWithScanner.nextLine()
 
     FileRenamingService service = new FileRenamingService(
         workingDirectory,
         backupDirectory,
-        contains,
-        replaceWith,
-        logFilePath
+        fileNameWith,
+        replaceWith
     )
     service.execute()
+    println('Done.')
 }
