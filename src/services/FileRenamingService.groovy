@@ -1,9 +1,10 @@
+package services
+
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.Paths
 import java.security.MessageDigest
 import java.text.MessageFormat
-import java.util.logging.ConsoleHandler
 import java.util.logging.FileHandler
 import java.util.logging.Level
 import java.util.logging.Logger
@@ -134,3 +135,4 @@ class FileRenamingService {
         )
     }
 }
+
