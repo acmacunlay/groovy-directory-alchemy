@@ -14,10 +14,4 @@ A simple project that renames files in a given directory and its subdirectories.
 
 ## Usage
 
-In `Main.groovy`, replace the following variables depending
-on your use case
-- `workingDirectory`: The directory where the project will look for file names
-- `backupDirectory`: The directory where the project will back up the files before renaming them
-- `contains`: The character sequence that the project will look for in the file name
-- `replaceWith`: The character that the project will replace the matches with. The project will replace every occurrence of the found match in a file name.
-- `logFilePath`: The path where the project will write its logs.
+Run Main.groovy in IntelliJ IDEA IDE and provide requested arguments.
